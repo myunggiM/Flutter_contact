@@ -11,7 +11,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp( // IOS 느낌 : Cupertino()
-      home: Icon(Icons.event)
-   );
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('앱임'),
+        ), // 상단에 들어갈 위젯
+        body: Text('안녕'),
+       // 중단에 들어갈 위젯
+        bottomNavigationBar: Row(
+          mainAxisAlignment:
+            MainAxisAlignment.spaceEvenly,
+          children: [
+              Icon(Icons.phone),// 하단에 들어갈 위젯
+              Icon(Icons.message),
+              Icon(Icons.contact_page),
+    ],
+      )
+      )
+    );
   }
 }
